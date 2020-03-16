@@ -1,10 +1,5 @@
 stage('Performance Tests') {
-  agent {
-    label 'master'
-  }
-  when {
-    branch 'master'
-  }
+  agent any
   steps {
     deleteDir()
     checkout scm
