@@ -1,5 +1,6 @@
-stage('Performance Tests') {
+pipeline{
   agent any
+  stage('Performance Tests') {
   steps {
     deleteDir()
     checkout scm
@@ -18,4 +19,5 @@ stage('Performance Tests') {
       ])
     }
   }
+}
 }
